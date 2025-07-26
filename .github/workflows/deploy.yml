@@ -6,9 +6,8 @@ on:
     # - cron: '0 6-18 * * *'  # Every hour from 6 AM to 6 PM UTC
     # Runs once at midnight CEST (10 PM UTC)
     # - cron: '0 22 * * *'     # Every day at 10 PM UTC
-    - cron: '*/1 * * * *'  # Every 5 minutes
-
-    push:
+    - cron: '*/1 * * * *'  # Every 1 minutes
+  push:
     branches:
       - main  # Change this to your main branch if different
 
