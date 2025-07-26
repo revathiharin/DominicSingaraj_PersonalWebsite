@@ -7,9 +7,9 @@ on:
     # Runs once at midnight CEST (10 PM UTC)
     # - cron: '0 22 * * *'     # Every day at 10 PM UTC
     - cron: '*/1 * * * *'  # Every 1 minutes
-  push:
-    branches:
-      - main  # Change this to your main branch if different
+  #push:
+    #branches:
+      #- main  # Change this to your main branch if different
 
 jobs:
   build:
@@ -22,6 +22,7 @@ jobs:
           repository: revathiharin/DominicPersonalWebsite_Test
           token: ${{ secrets.GITHUB_TOKEN }}
           path: private-repo
+          ref:  main
 
       - name: Checkout public repo
         uses: actions/checkout@v2
