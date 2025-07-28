@@ -1,1 +1,0 @@
-# Dominic Singaraj Personal Website
