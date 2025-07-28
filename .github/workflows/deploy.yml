@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: revathiharin/DominicPersonalWebsite_Test
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.AccessForDominicPersonalWebsite_Test }}
           path: private-repo
           ref:  main
 
