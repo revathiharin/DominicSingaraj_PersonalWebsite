@@ -5,7 +5,7 @@ on:
     # Runs every hour from 8 AM to 8 PM CEST (6 AM to 6 PM UTC)
     # - cron: '0 6-18 * * *'  # Every hour from 6 AM to 6 PM UTC
     # Runs once at midnight CEST (10 PM UTC)
-    # - cron: '0 22 * * *'     # Every day at 10 PM UTC
+    - cron: '0 22 * * *'     # Every day at 10 PM UTC
     # - cron: '*/30 * * * *'  # Every 1 minutes
   push:
     branches:
