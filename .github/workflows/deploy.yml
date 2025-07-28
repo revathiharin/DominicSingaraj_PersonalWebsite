@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: revathiharin/DominicSingaraj_PersonalWebsite
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESSFORDOMINICPERSONALWEBSITE_TEST }}
           path: public-repo
 
       - name: Install Node.js
