@@ -50,31 +50,6 @@ jobs:
           cd private-repo
           npm run build
 
-      - name: Wipe public-repo
-        run: |
-            # remove all files (including dotfiles) in public-repo
-            rm -rf public-repo/* || true
-            rm -rf public-repo/.[!.]* || true
-            
-      - name: Copy build to public-repo
-        run: |
-          cp -a private-repo/dist/. public-repo/
-
-      - name: Commit and push public-repo (force to gh-pages)
-        env:
-          GH\_REPO: revathiharin/DominicSingaraj\_PersonalWebsite
-          GH\_TOKEN: \${{ secrets.ACCESSFORDOMINICPERSONALWEBSITE\_TEST }}
-        run: |
-          cd public-repo
-          git init
-          git remote add origin "https://\${GH\_TOKEN}@github.com/\${GH\_REPO}.git"
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "ci: publish site (overwrite)" || true
-          # push to gh-pages branch (change to main if you prefer)
-          git push --force origin HEAD:gh-pages
-          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
