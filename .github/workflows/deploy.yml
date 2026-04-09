@@ -27,7 +27,7 @@ jobs:
       - name: Checkout public repo
         uses: actions/checkout@v2
         with:
-          repository: revathiharin/DominicSingaraj_PersonalWebsite
+          repository: revathiharin/DominicPersonalWebsite_2026-03-30
           token: ${{ secrets.ACCESSFORDOMINICPERSONALWEBSITE_TEST }}
           path: public-repo
 
